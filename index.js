@@ -215,6 +215,7 @@ app.get("/items", (req, res) => {
 // GET /items/:id – Get item by ID
 app.get("/items/:id", (req, res) => {
   const { id } = req.params;
+  console.log('id', id);
   const value = dataStore.find((item) => item.id === parseInt(id));
 
   if (!value) {
